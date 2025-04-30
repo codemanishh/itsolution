@@ -1,0 +1,139 @@
+Here's a complete and detailed prompt that you can copy and paste into Replit AI (Ghostwriter) to generate your full website project based on your institution's requirements. This prompt covers:
+
+Two units (Computer & Typing classes)
+
+Modern UI, responsive design
+
+Certificate validation from a JSON file
+
+Chat support
+
+Email form using emailjs.com
+
+Dynamic display of hoardings
+
+Easy manual data update via JSON files
+
+
+
+---
+
+Copy & Paste the Prompt Below into Replit AI
+
+Create a modern, fully responsive website using **React.js** (preferably with Vite or Create React App) for an educational institution named **IT Solution Siwan**, located in Arya Samaj Campus, DAV Mode, Station Road, Siwan, Bihar, PIN 841226. Owner: Birendra Kumar.
+
+### Structure of the Institution:
+- The institution has two units:
+  1. **Computer Class** — Offers courses like DCA, ADCA, BCA
+  2. **Typing Class** — Offers English Typing, Hindi Typing, and Stenography
+
+---
+
+### Pages/Sections Required:
+
+1. **Home Page**
+   - Welcome message and intro about IT Solution Siwan
+   - Highlight benefits like: "In just 6 months, become Atmanirbhar (self-dependent) with ADCA/DCA"
+   - Display job roles achievable after ADCA like: Computer Operator, Data Entry Operator, DTP Operator, Office Executive, Graphics Designer, Customer Support, Programmer, Photo Editor, Accountant, Help Desk Operator
+   - A **carousel or grid** that dynamically shows latest hoardings/posters from a local `hoardings.json` file
+   - Buttons/Links to Course Details, Contact, Certificate Validation
+
+2. **Courses Page**
+   - Two sections:
+     - **Computer Courses**: DCA, ADCA, BCA — Each with description, duration (6 months), benefits
+     - **Typing Courses**: English Typing, Hindi Typing, Stenography — Each with description, features
+   - Make this data-driven using a local `courses.json` file for easy future updates
+
+3. **Certificate Validation Page**
+   - A form with one input: "Enter Certificate Number"
+   - On submit, fetch data from a local `certificates.json` file
+     - If certificate number matches, show:
+       - Student Name
+       - Certificate Name
+       - Percentage
+     - Else show: "Certificate Not Found"
+
+4. **Contact Page**
+   - A form for user to send inquiries using **emailjs.com**
+   - Fields: Name, Email, Message
+   - Give placeholders where developer can insert EmailJS public key, template ID, and service ID
+   - Include basic form validation
+
+5. **Live Chat Support**
+   - Integrate a floating **chat widget** using a free 3rd-party service like Tawk.to or Chatwoot
+   - Developer should be able to update the script in `chatSupport.js` file
+
+---
+
+### Technical Requirements:
+- Use **React.js** + modern UI (e.g., Tailwind CSS, Bootstrap or custom CSS)
+- Make entire site **mobile responsive**
+- Use **React Router** for page navigation
+- Use local JSON files to feed data (hoardings.json, courses.json, certificates.json)
+- Create a separate folder `/data` for all these JSONs
+- Website must automatically update UI when JSON content is changed manually
+- All components should be reusable and well-structured
+
+---
+
+### Folder Structure Example:
+
+/src /components Header.jsx Footer.jsx HoardingGrid.jsx CourseCard.jsx CertificateValidator.jsx ContactForm.jsx /pages Home.jsx Courses.jsx CertificateValidation.jsx Contact.jsx /data hoardings.json courses.json certificates.json /utils chatSupport.js emailConfig.js (EmailJS placeholders) App.jsx index.js
+
+---
+
+### JSON Format Samples:
+
+**hoardings.json**
+```json
+[
+  { "title": "Join Our DCA Batch", "image": "hoarding1.jpg" },
+  { "title": "ADCA Starts From May", "image": "hoarding2.jpg" }
+]
+
+courses.json
+
+{
+  "computerCourses": [
+    { "name": "DCA", "duration": "6 months", "description": "Covers basic computer skills" },
+    { "name": "ADCA", "duration": "6 months", "description": "Advanced skills for jobs" }
+  ],
+  "typingCourses": [
+    { "name": "English Typing", "description": "Speed and accuracy" },
+    { "name": "Stenography", "description": "Prepare for govt exams" }
+  ]
+}
+
+certificates.json
+
+[
+  {
+    "certificateNumber": "ITS20241001",
+    "name": "Ravi Kumar",
+    "course": "ADCA",
+    "percentage": "85%"
+  }
+]
+
+
+---
+
+Final Notes:
+
+Add a placeholder .env file or emailConfig.js where I can insert my EmailJS secret keys.
+
+Do not hardcode any dynamic data.
+
+All design should be clean, modern and work perfectly on mobile and desktop.
+
+Add a "Back to Top" button and smooth scroll.
+
+
+
+---
+
+Please generate the full React project based on this requirement.
+
+---
+
+Would you like me to generate the project skeleton for you directly too?
