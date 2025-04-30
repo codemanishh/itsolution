@@ -2,18 +2,18 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section id="home" className="bg-gradient-to-br from-primary-700 to-secondary-800 py-16 md:py-24">
+    <section id="home" className="bg-black py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Welcome to IT Solution Siwan</h2>
-            <p className="text-lg mb-6 text-gray-100">Your pathway to success in the digital world. Located at Arya Samaj Campus, DAV Mode, Station Road, Siwan, Bihar.</p>
-            <div className="bg-gray-900/70 backdrop-blur-sm p-5 rounded-lg mb-8 border border-gray-700 shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
-              <p className="text-xl font-semibold mb-2 text-white">In just 6 months, become <span className="text-yellow-300 font-bold">Atmanirbhar</span> (self-dependent) with ADCA/DCA</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-yellow-300">Welcome to IT Solution Siwan</h2>
+            <p className="text-lg mb-6 text-yellow-100">Your pathway to success in the digital world. Located at Arya Samaj Campus, DAV Mode, Station Road, Siwan, Bihar.</p>
+            <div className="bg-gray-800 p-5 rounded-lg mb-8 border-2 border-yellow-300 shadow-xl transform hover:-translate-y-1 transition-transform duration-300">
+              <p className="text-xl font-semibold mb-2 text-yellow-300">In just 6 months, become <span className="text-white font-bold">Atmanirbhar</span> (self-dependent) with ADCA/DCA</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <a href="#courses" className="bg-white text-primary-700 font-medium px-6 py-3 rounded-lg hover:bg-slate-100 hover:scale-105 transition-all duration-300 shadow-lg">Explore Courses</a>
-              <a href="#contact" className="bg-transparent border-2 border-white text-white font-medium px-6 py-3 rounded-lg hover:bg-white/10 hover:scale-105 transition-all duration-300">Contact Us</a>
+              <a href="#courses" className="bg-yellow-300 text-black font-bold px-6 py-3 rounded-lg hover:bg-yellow-400 hover:scale-105 transition-all duration-300 shadow-lg text-lg">Explore Courses</a>
+              <a href="#contact" className="bg-transparent border-2 border-yellow-300 text-yellow-300 font-bold px-6 py-3 rounded-lg hover:bg-yellow-300/10 hover:scale-105 transition-all duration-300 text-lg">Contact Us</a>
             </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center">
