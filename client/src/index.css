@@ -54,11 +54,15 @@
   }
 
   body {
-    @apply bg-background text-foreground font-['Roboto',sans-serif];
+    @apply bg-background text-black font-['Roboto',sans-serif];
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-['Inter',sans-serif];
+    @apply font-['Inter',sans-serif] text-black;
+  }
+  
+  p, span, a, li, input, textarea, button, label {
+    @apply text-black;
   }
 }
 
@@ -89,4 +93,25 @@ section {
 /* Chat widget */
 .chat-widget {
   @apply z-50;
+}
+
+/* Force black text in specific components */
+.text-slate-500, .text-slate-600, .text-slate-700, .text-slate-800 {
+  @apply text-black !important;
+}
+
+/* Exceptions for buttons and special elements with white text */
+.bg-primary-600 *, .bg-primary-700 *, .bg-secondary-600 *, .bg-secondary-700 *, .bg-accent-500 *,
+.bg-gradient-to-r *, .bg-gradient-to-br *, .bg-slate-900 * {
+  @apply text-white;
+}
+
+/* Button text color exceptions */
+.btn, 
+.bg-primary-600, .bg-primary-700, 
+.bg-secondary-600, .bg-secondary-700, 
+.bg-accent-500,
+.bg-gradient-to-r, .bg-gradient-to-br, 
+.bg-slate-900 {
+  @apply text-white;
 }

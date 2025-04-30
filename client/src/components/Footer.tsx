@@ -18,16 +18,16 @@ const Footer = () => {
               Our mission is to empower students with the skills they need to succeed in today's digital world.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-white transition" aria-label="Facebook">
+              <a href="#" className="text-white hover:text-primary-300 transition" aria-label="Facebook">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition" aria-label="Instagram">
+              <a href="#" className="text-white hover:text-primary-300 transition" aria-label="Instagram">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition" aria-label="WhatsApp">
+              <a href="#" className="text-white hover:text-primary-300 transition" aria-label="WhatsApp">
                 <i className="fab fa-whatsapp"></i>
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition" aria-label="YouTube">
+              <a href="#" className="text-white hover:text-primary-300 transition" aria-label="YouTube">
                 <i className="fab fa-youtube"></i>
               </a>
             </div>
@@ -36,22 +36,22 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-slate-400 hover:text-white transition">Home</a></li>
-              <li><a href="#courses" className="text-slate-400 hover:text-white transition">Courses</a></li>
-              <li><a href="#certificate" className="text-slate-400 hover:text-white transition">Certificate Validation</a></li>
-              <li><a href="#contact" className="text-slate-400 hover:text-white transition">Contact Us</a></li>
+              <li><a href="#home" className="text-white hover:text-primary-300 transition">Home</a></li>
+              <li><a href="#courses" className="text-white hover:text-primary-300 transition">Courses</a></li>
+              <li><a href="#certificate" className="text-white hover:text-primary-300 transition">Certificate Validation</a></li>
+              <li><a href="#contact" className="text-white hover:text-primary-300 transition">Contact Us</a></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Courses</h4>
             <ul className="space-y-2">
-              <li><a href="#courses" className="text-slate-400 hover:text-white transition">DCA</a></li>
-              <li><a href="#courses" className="text-slate-400 hover:text-white transition">ADCA</a></li>
-              <li><a href="#courses" className="text-slate-400 hover:text-white transition">BCA</a></li>
-              <li><a href="#courses" className="text-slate-400 hover:text-white transition">English Typing</a></li>
-              <li><a href="#courses" className="text-slate-400 hover:text-white transition">Hindi Typing</a></li>
-              <li><a href="#courses" className="text-slate-400 hover:text-white transition">Stenography</a></li>
+              <li><a href="#courses" className="text-white hover:text-primary-300 transition">DCA</a></li>
+              <li><a href="#courses" className="text-white hover:text-primary-300 transition">ADCA</a></li>
+              <li><a href="#courses" className="text-white hover:text-primary-300 transition">BCA</a></li>
+              <li><a href="#courses" className="text-white hover:text-primary-300 transition">English Typing</a></li>
+              <li><a href="#courses" className="text-white hover:text-primary-300 transition">Hindi Typing</a></li>
+              <li><a href="#courses" className="text-white hover:text-primary-300 transition">Stenography</a></li>
             </ul>
           </div>
         </div>
@@ -59,8 +59,8 @@ const Footer = () => {
         <hr className="border-slate-700 my-8" />
         
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-400 text-sm">&copy; {new Date().getFullYear()} IT Solution Siwan. All rights reserved.</p>
-          <p className="text-slate-400 text-sm mt-2 md:mt-0">Owner: Birendra Kumar</p>
+          <p className="text-white text-sm">&copy; {new Date().getFullYear()} IT Solution Siwan. All rights reserved.</p>
+          <p className="text-white text-sm mt-2 md:mt-0">Owner: Birendra Kumar</p>
         </div>
       </div>
     </footer>
