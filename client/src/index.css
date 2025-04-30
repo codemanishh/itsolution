@@ -4,48 +4,75 @@
 @tailwind utilities;
 
 :root {
-  --background: 210 40% 98%;
-  --foreground: 222 47% 11%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
-  --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --primary: 221.2 83.2% 53.3%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 226 70% 55.5%;
-  --secondary-foreground: 210 40% 98%;
-  --accent: 210 79.2% 42.8%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --ring: 221.2 83.2% 53.3%;
+  /* Custom color palette using exact hex values */
+  --red: #F52549;       /* Bright red */
+  --coral: #FA6775;     /* Coral pink */
+  --dark-green: #31473A; /* Deep green */
+  --pale-mint: #EDF4F2; /* Pale mint */
+  --light-blue: #C4DFE6; /* Light blue */
+  --teal: #66A5AD;      /* Teal blue */
+  
+  /* System theme variables */
+  --background: 160 20% 95%;  /* #EDF4F2 - Pale mint */
+  --foreground: 150 15% 24%;  /* #31473A - Deep green */
+  
+  --muted: 194 31% 86%;       /* #C4DFE6 - Light blue */
+  --muted-foreground: 150 15% 24%; /* Dark green */
+  
+  --popover: 160 20% 95%;     /* Pale mint */
+  --popover-foreground: 150 15% 24%; /* Dark green */
+  
+  --card: 0 0% 100%;          /* White */
+  --card-foreground: 150 15% 24%; /* Dark green */
+  
+  --border: 194 31% 86%;      /* Light blue */
+  --input: 194 31% 86%;       /* Light blue */
+  
+  --primary: 345 91% 55%;     /* #F52549 - Bright red */
+  --primary-foreground: 0 0% 100%; /* White */
+  
+  --secondary: 351 93% 69%;   /* #FA6775 - Coral pink */
+  --secondary-foreground: 0 0% 100%; /* White */
+  
+  --accent: 185 26% 54%;      /* #66A5AD - Teal blue */
+  --accent-foreground: 0 0% 100%; /* White */
+  
+  --destructive: 0 84.2% 60.2%; /* Default destructive */
+  --destructive-foreground: 0 0% 98%; /* Default */
+  
+  --ring: 345 91% 55%;        /* Bright red */
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: 222 47% 11%;
-  --foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --popover: 222 47% 11%;
-  --popover-foreground: 210 40% 98%;
-  --card: 222 47% 11%;
-  --card-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --primary: 217.2 91.2% 59.8%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-  --ring: 217.2 91.2% 59.8%;
+  --background: 150 15% 24%;  /* #31473A - Deep green */
+  --foreground: 160 20% 95%;  /* #EDF4F2 - Pale mint */
+  
+  --muted: 150 15% 20%;       /* Darker green */
+  --muted-foreground: 160 20% 95%; /* Pale mint */
+  
+  --popover: 150 15% 24%;     /* Deep green */
+  --popover-foreground: 160 20% 95%; /* Pale mint */
+  
+  --card: 150 15% 24%;        /* Deep green */
+  --card-foreground: 160 20% 95%; /* Pale mint */
+  
+  --border: 185 26% 44%;      /* Darker teal */
+  --input: 185 26% 44%;       /* Darker teal */
+  
+  --primary: 345 91% 55%;     /* #F52549 - Bright red */
+  --primary-foreground: 0 0% 100%; /* White */
+  
+  --secondary: 351 93% 69%;   /* #FA6775 - Coral pink */
+  --secondary-foreground: 0 0% 100%; /* White */
+  
+  --accent: 185 26% 54%;      /* #66A5AD - Teal blue */
+  --accent-foreground: 0 0% 100%; /* White */
+  
+  --destructive: 0 62.8% 30.6%; /* Default destructive */
+  --destructive-foreground: 0 0% 98%; /* Default */
+  
+  --ring: 345 91% 55%;        /* Bright red */
 }
 
 @layer base {
@@ -54,15 +81,19 @@
   }
 
   body {
-    @apply bg-background text-slate-800 font-['Roboto',sans-serif];
+    @apply bg-background text-foreground font-['Roboto',sans-serif];
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-['Inter',sans-serif] text-slate-800;
+    @apply font-['Inter',sans-serif] text-foreground font-semibold;
   }
   
-  p, span, a, li, input, textarea, button, label {
-    @apply text-slate-800;
+  p, span, a, li, input, textarea, label {
+    @apply text-foreground;
+  }
+
+  button {
+    @apply text-primary-foreground;
   }
 }
 
@@ -95,17 +126,53 @@ section {
   @apply z-50;
 }
 
-/* High-contrast text utilities */
-.text-high-contrast {
-  @apply text-yellow-300;
+/* Custom color utility classes for direct hex value access */
+.text-brand-red {
+  color: #F52549;
 }
 
-.text-high-contrast-light {
-  @apply text-yellow-200;
+.text-brand-coral {
+  color: #FA6775;
 }
 
-.text-high-contrast-dark {
-  @apply text-blue-900;
+.text-brand-green {
+  color: #31473A;
+}
+
+.text-brand-mint {
+  color: #EDF4F2;
+}
+
+.text-brand-lightblue {
+  color: #C4DFE6;
+}
+
+.text-brand-teal {
+  color: #66A5AD;
+}
+
+.bg-brand-red {
+  background-color: #F52549;
+}
+
+.bg-brand-coral {
+  background-color: #FA6775;
+}
+
+.bg-brand-green {
+  background-color: #31473A;
+}
+
+.bg-brand-mint {
+  background-color: #EDF4F2;
+}
+
+.bg-brand-lightblue {
+  background-color: #C4DFE6;
+}
+
+.bg-brand-teal {
+  background-color: #66A5AD;
 }
 
 /* Dark backgrounds should always have light text */
@@ -130,9 +197,56 @@ section {
 
 /* Create general classes for text colors based on backgrounds */
 .text-on-dark {
-  @apply text-white !important;
+  color: #EDF4F2 !important; /* pale mint on dark */
 }
 
 .text-on-light {
-  @apply text-slate-900 !important;
+  color: #31473A !important; /* dark green on light */
+}
+
+.bg-brand-red *, .bg-brand-coral *, .bg-brand-green *, .bg-brand-teal * {
+  color: #EDF4F2 !important; /* pale mint text on dark backgrounds */
+}
+
+.bg-brand-mint *, .bg-brand-lightblue * {
+  color: #31473A !important; /* dark green text on light backgrounds */
+}
+
+/* Button styles with our brand colors */
+.btn-primary {
+  background-color: #F52549;
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: #FA6775;
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+.btn-accent {
+  background-color: #66A5AD;
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-accent:hover {
+  opacity: 0.9;
+}
+
+.btn-outline {
+  border: 2px solid #F52549;
+  background-color: transparent;
+  color: #F52549;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background-color: #F52549;
+  color: white;
 }
