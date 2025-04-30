@@ -1,0 +1,32 @@
+[
+  {
+    "certificateNumber": "ITS20241001",
+    "name": "Ravi Kumar",
+    "course": "ADCA",
+    "percentage": "85%"
+  },
+  {
+    "certificateNumber": "ITS20241002",
+    "name": "Priya Singh",
+    "course": "DCA",
+    "percentage": "78%"
+  },
+  {
+    "certificateNumber": "ITS20241003",
+    "name": "Ajay Sharma",
+    "course": "English Typing",
+    "percentage": "90%"
+  },
+  {
+    "certificateNumber": "ITS20241004",
+    "name": "Neha Gupta",
+    "course": "Hindi Typing",
+    "percentage": "82%"
+  },
+  {
+    "certificateNumber": "ITS20241005",
+    "name": "Rahul Verma",
+    "course": "BCA",
+    "percentage": "75%"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Computer Operator",
+    "icon": "monitor"
+  },
+  {
+    "title": "Data Entry Operator",
+    "icon": "keyboard"
+  },
+  {
+    "title": "DTP Operator",
+    "icon": "printer"
+  },
+  {
+    "title": "Office Executive",
+    "icon": "briefcase"
+  },
+  {
+    "title": "Graphics Designer",
+    "icon": "paintbrush"
+  },
+  {
+    "title": "Customer Support",
+    "icon": "headphones"
+  },
+  {
+    "title": "Programmer",
+    "icon": "code"
+  },
+  {
+    "title": "Photo Editor",
+    "icon": "image"
+  },
+  {
+    "title": "Accountant",
+    "icon": "calculator"
+  },
+  {
+    "title": "Help Desk Operator",
+    "icon": "helpCircle"
+  }
+]

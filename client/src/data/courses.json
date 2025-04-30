@@ -1,0 +1,111 @@
+{
+  "computerCourses": [
+    {
+      "name": "DCA",
+      "title": "Diploma in Computer Applications",
+      "duration": "6 months",
+      "description": "A comprehensive course covering basic computer skills including MS Office, Internet basics, and fundamental computer concepts.",
+      "color": "bg-primary-700",
+      "features": [
+        {
+          "text": "Microsoft Office Suite (Word, Excel, PowerPoint)"
+        },
+        {
+          "text": "Basic web design and internet skills"
+        },
+        {
+          "text": "Computer fundamentals and operating systems"
+        }
+      ]
+    },
+    {
+      "name": "ADCA",
+      "title": "Advanced Diploma in Computer Applications",
+      "duration": "6 months",
+      "description": "Advanced computer skills including programming, web development, and specialized software applications.",
+      "color": "bg-secondary-600",
+      "features": [
+        {
+          "text": "Advanced Office tools and Tally for accounting"
+        },
+        {
+          "text": "Web development (HTML, CSS, JavaScript basics)"
+        },
+        {
+          "text": "Graphic design fundamentals with Photoshop"
+        }
+      ]
+    },
+    {
+      "name": "BCA",
+      "title": "Bachelor of Computer Applications",
+      "duration": "3 years",
+      "description": "A comprehensive degree program covering all aspects of computer science and applications.",
+      "color": "bg-accent-500",
+      "features": [
+        {
+          "text": "Programming languages (C, C++, Java)"
+        },
+        {
+          "text": "Database management and system design"
+        },
+        {
+          "text": "Software development and project management"
+        }
+      ]
+    }
+  ],
+  "typingCourses": [
+    {
+      "name": "English Typing",
+      "duration": "3 months",
+      "description": "Master English typing with speed and accuracy. Perfect for office jobs and government positions.",
+      "color": "bg-gradient-to-r from-indigo-500 to-purple-600",
+      "features": [
+        {
+          "text": "Touch typing techniques"
+        },
+        {
+          "text": "Speed building exercises"
+        },
+        {
+          "text": "Accuracy improvement drills"
+        }
+      ]
+    },
+    {
+      "name": "Hindi Typing",
+      "duration": "3 months",
+      "description": "Learn Hindi typing using both Krutidev and Unicode methods for government jobs and office work.",
+      "color": "bg-gradient-to-r from-orange-500 to-pink-500",
+      "features": [
+        {
+          "text": "Krutidev and Devlys keyboard layouts"
+        },
+        {
+          "text": "Unicode Hindi typing"
+        },
+        {
+          "text": "Preparation for government typing tests"
+        }
+      ]
+    },
+    {
+      "name": "Stenography",
+      "duration": "6 months",
+      "description": "Learn shorthand writing and transcription for secretarial and court reporting positions.",
+      "color": "bg-gradient-to-r from-emerald-500 to-teal-500",
+      "features": [
+        {
+          "text": "Pitman shorthand basics"
+        },
+        {
+          "text": "Dictation and transcription practice"
+        },
+        {
+          "text": "Speed building for professional requirements"
+        }
+      ]
+    }
+  ]
+}
