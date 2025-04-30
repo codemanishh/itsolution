@@ -94,6 +94,7 @@
     },
     {
       "name": "Stenography",
+      "title": "Stenography Course",
       "duration": "6 months",
       "description": "Learn shorthand writing and transcription for secretarial and court reporting positions.",
       "color": "bg-gradient-to-r from-emerald-500 to-teal-500",
