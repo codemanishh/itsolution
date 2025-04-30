@@ -12,7 +12,7 @@ const Hero = () => {
               <p className="text-xl font-semibold mb-2 text-brand-mint">In just 6 months, become <span className="text-brand-red font-bold">Atmanirbhar</span> (self-dependent) with ADCA/DCA</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <a href="#courses" className="bg-brand-red text-white font-bold px-6 py-3 rounded-lg hover:bg-opacity-90 hover:scale-105 transition-all duration-300 shadow-lg text-lg">Explore Courses</a>
+              <a href="#courses" className="bg-brand-red text-black font-bold px-6 py-3 rounded-lg hover:bg-opacity-90 hover:scale-105 transition-all duration-300 shadow-lg text-lg">Explore Courses</a>
               <a href="#contact" className="bg-transparent border-2 border-brand-coral text-brand-coral font-bold px-6 py-3 rounded-lg hover:bg-brand-coral hover:bg-opacity-10 hover:scale-105 transition-all duration-300 text-lg">Contact Us</a>
             </div>
           </div>

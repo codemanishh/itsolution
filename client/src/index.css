@@ -192,7 +192,7 @@ section {
 .bg-gradient-to-r p, .bg-gradient-to-r span, .bg-gradient-to-r a, .bg-gradient-to-r li, .bg-gradient-to-r div,
 .bg-gradient-to-br h1, .bg-gradient-to-br h2, .bg-gradient-to-br h3, .bg-gradient-to-br h4, .bg-gradient-to-br h5, .bg-gradient-to-br h6,
 .bg-gradient-to-br p, .bg-gradient-to-br span, .bg-gradient-to-br a, .bg-gradient-to-br li, .bg-gradient-to-br div {
-  @apply text-white;
+  @apply text-black;
 }
 
 /* Create general classes for text colors based on backgrounds */

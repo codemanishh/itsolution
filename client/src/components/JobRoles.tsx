@@ -36,7 +36,7 @@ const JobRoles = () => {
   };
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-black">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">Career Opportunities After Completion</h2>
         <p className="text-slate-600 text-center mb-8 max-w-2xl mx-auto">Our ADCA/DCA courses prepare you for various professional roles in the IT industry</p>

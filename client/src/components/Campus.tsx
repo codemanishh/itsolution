@@ -1,6 +1,6 @@
 const Campus = () => {
   return (
-    <section className="py-12 bg-slate-800 text-white">
+    <section className="py-12 bg-slate-800 text-black">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">Our Campus</h2>
         <p className="text-slate-300 text-center mb-10 max-w-2xl mx-auto">

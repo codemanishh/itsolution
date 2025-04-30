@@ -50,7 +50,7 @@ const Hoardings = () => {
               >
                 {hoardings.map((hoarding, index) => (
                   <div key={index} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-3">
-                    <div className="bg-white rounded-lg overflow-hidden shadow-md h-full">
+                    <div className="bg-black rounded-lg overflow-hidden shadow-md h-full">
                       <img 
                         src={hoarding.image} 
                         alt={hoarding.title} 
@@ -68,14 +68,14 @@ const Hoardings = () => {
             
             {/* Navigation Buttons */}
             <button 
-              className="absolute top-1/2 left-2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary-600 w-10 h-10 rounded-full flex items-center justify-center shadow-md z-10" 
+              className="absolute top-1/2 left-2 -translate-y-1/2 bg-black/80 hover:bg-black text-primary-600 w-10 h-10 rounded-full flex items-center justify-center shadow-md z-10" 
               onClick={handlePrevClick}
               aria-label="Previous"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
             <button 
-              className="absolute top-1/2 right-2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary-600 w-10 h-10 rounded-full flex items-center justify-center shadow-md z-10" 
+              className="absolute top-1/2 right-2 -translate-y-1/2 bg-black/80 hover:bg-black text-primary-600 w-10 h-10 rounded-full flex items-center justify-center shadow-md z-10" 
               onClick={handleNextClick}
               aria-label="Next"
             >

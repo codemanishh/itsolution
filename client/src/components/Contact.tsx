@@ -86,7 +86,7 @@ const Contact = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <form ref={formRef} onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
+              <form ref={formRef} onSubmit={handleSubmit} className="bg-black p-6 rounded-lg shadow-md">
                 <div className="mb-6">
                   <label htmlFor="fullName" className="block text-sm font-medium text-brand-green mb-2">
                     Full Name
@@ -135,7 +135,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-brand-red hover:bg-opacity-90 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300"
+                  className="w-full bg-brand-red hover:bg-opacity-90 text-black font-medium py-3 px-4 rounded-lg transition-all duration-300"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
@@ -196,28 +196,28 @@ const Contact = () => {
                   <div className="flex space-x-4">
                     <a 
                       href="#" 
-                      className="bg-white text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+                      className="bg-black text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
                       aria-label="Facebook"
                     >
                       <i className="fab fa-facebook-f"></i>
                     </a>
                     <a 
                       href="#" 
-                      className="bg-white text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+                      className="bg-black text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
                       aria-label="Instagram"
                     >
                       <i className="fab fa-instagram"></i>
                     </a>
                     <a 
                       href="#" 
-                      className="bg-white text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+                      className="bg-black text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
                       aria-label="WhatsApp"
                     >
                       <i className="fab fa-whatsapp"></i>
                     </a>
                     <a 
                       href="#" 
-                      className="bg-white text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+                      className="bg-black text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
                       aria-label="YouTube"
                     >
                       <i className="fab fa-youtube"></i>

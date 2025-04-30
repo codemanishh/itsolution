@@ -42,7 +42,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
             {/* Logo and name */}
-            <div className="h-12 w-12 rounded-full bg-brand-red flex items-center justify-center text-white font-bold text-xl">
+            <div className="h-12 w-12 rounded-full bg-brand-red flex items-center justify-center text-black font-bold text-xl">
               ITS
             </div>
             <div>

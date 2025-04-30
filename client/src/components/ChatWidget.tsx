@@ -32,19 +32,19 @@ const ChatWidget = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!message.trim()) return;
-    
+
     // Add user message
     const userMessage: ChatMessage = {
       text: message,
       isUser: true,
       time: formatTime()
     };
-    
+
     setMessages([...messages, userMessage]);
     setMessage('');
-    
+
     // Simulate response after a delay
     setTimeout(() => {
       const botMessage: ChatMessage = {
@@ -52,7 +52,7 @@ const ChatWidget = () => {
         isUser: false,
         time: formatTime()
       };
-      
+
       setMessages(prevMessages => [...prevMessages, botMessage]);
     }, 1000);
   };
@@ -66,19 +66,19 @@ const ChatWidget = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      <button 
+      <button
         onClick={toggleChat}
-        className="bg-primary-600 hover:bg-primary-700 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition"
+        className="bg-red-600 hover:bg-red-700 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition"
         aria-label={isOpen ? "Close chat" : "Open chat"}
       >
         {isOpen ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
       </button>
-      
+
       <div className={cn(
         "absolute bottom-16 right-0 w-80 bg-white rounded-lg shadow-xl overflow-hidden transition-all duration-300",
         isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
       )}>
-        <div className="bg-primary-600 text-white p-4">
+        <div className="bg-red-600 text-white p-4">
           <div className="flex justify-between items-center">
             <h3 className="font-medium">Live Chat Support</h3>
             <button onClick={toggleChat} className="text-white hover:text-slate-200">
@@ -86,26 +86,26 @@ const ChatWidget = () => {
             </button>
           </div>
         </div>
-        
-        <div className="h-80 overflow-y-auto p-4 bg-slate-50">
+
+        <div className="h-80 overflow-y-auto p-4 bg-white">
           {messages.map((msg, index) => (
             <div key={index} className={`flex mb-4 ${msg.isUser ? 'justify-end' : ''}`}>
               {!msg.isUser && (
-                <div className="w-8 h-8 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0">
                   <User className="h-4 w-4" />
                 </div>
               )}
-              
+
               <div className={cn(
                 "p-3 rounded-lg shadow-sm max-w-[80%]",
-                msg.isUser 
-                  ? "mr-2 bg-primary-100" 
+                msg.isUser
+                  ? "mr-2 bg-red-100"
                   : "ml-2 bg-white"
               )}>
-                <p className="text-sm">{msg.text}</p>
+                <p className="text-sm text-black">{msg.text}</p>
                 <p className="text-xs text-slate-500 mt-1">{msg.time}</p>
               </div>
-              
+
               {msg.isUser && (
                 <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center flex-shrink-0">
                   <User className="h-4 w-4" />
@@ -115,7 +115,7 @@ const ChatWidget = () => {
           ))}
           <div ref={messagesEndRef} />
         </div>
-        
+
         <div className="border-t border-slate-200 p-3">
           <form onSubmit={handleSubmit} className="flex">
             <Input
@@ -123,11 +123,11 @@ const ChatWidget = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Type your message..."
-              className="flex-1 px-3 py-2 text-sm border border-slate-300 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-primary-500"
+              className="flex-1 px-3 py-2 text-sm border border-slate-300 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-red-500"
             />
-            <Button 
-              type="submit" 
-              className="bg-primary-600 text-white px-3 py-2 rounded-r-lg hover:bg-primary-700"
+            <Button
+              type="submit"
+              className="bg-red-600 text-white px-3 py-2 rounded-r-lg hover:bg-red-700"
             >
               <Send className="h-4 w-4" />
             </Button>

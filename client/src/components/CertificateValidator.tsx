@@ -50,7 +50,7 @@ const CertificateValidator = () => {
             Verify the authenticity of your certificate by entering the certificate number
           </p>
           
-          <div className="bg-white rounded-xl shadow-md p-6 md:p-8">
+          <div className="bg-black rounded-xl shadow-md p-6 md:p-8">
             <form onSubmit={handleSubmit} className="mb-6">
               <div className="mb-6">
                 <label htmlFor="certificateNumber" className="block text-sm font-medium text-slate-700 mb-2">
@@ -70,7 +70,7 @@ const CertificateValidator = () => {
               </div>
               <Button 
                 type="submit" 
-                className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-4 rounded-lg transition"
+                className="w-full bg-primary-600 hover:bg-primary-700 text-black font-medium py-3 px-4 rounded-lg transition"
               >
                 Verify Certificate
               </Button>
