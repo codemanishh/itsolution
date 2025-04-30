@@ -1,23 +1,24 @@
-import { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { toast } from '@/hooks/use-toast';
 import { CheckCircle, XCircle, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { isValidEmail } from '@/lib/utils';
-import emailjs from 'emailjs-com';
-import { emailConfig } from '@/lib/emailConfig';
+import emailjs from '@emailjs/browser';
+// import './Contact.css';
+import img1 from '../image/contact.png';
 
 const Contact = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
+  const formRef = useRef(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!fullName.trim() || !email.trim() || !message.trim()) {
       toast({
@@ -27,7 +28,7 @@ const Contact = () => {
       });
       return;
     }
-    
+
     if (!isValidEmail(email)) {
       toast({
         title: "Error",
@@ -36,28 +37,23 @@ const Contact = () => {
       });
       return;
     }
-    
+
     setIsSubmitting(true);
-    
+
     try {
-      const templateParams = {
-        from_name: fullName,
-        from_email: email,
-        message: message
-      };
-      
-      await emailjs.send(
-        emailConfig.serviceId,
-        emailConfig.templateId,
-        templateParams,
-        emailConfig.publicKey
+      await emailjs.sendForm(
+        'service_cfwtprr',
+        'template_7gcyemk',
+        formRef.current,
+        'eqtBYCIjQ840F9LKm'
       );
-      
+
       // Clear form
       setFullName('');
       setEmail('');
       setMessage('');
-      
+      formRef.current.reset();
+
       toast({
         title: "Success",
         description: "Your message has been sent successfully. We'll get back to you soon!",
@@ -83,7 +79,7 @@ const Contact = () => {
           <p className="text-brand-green text-center mb-12 max-w-2xl mx-auto">
             Have questions about our courses? Drop us a message and we'll get back to you shortly
           </p>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <form ref={formRef} onSubmit={handleSubmit} className="bg-black p-6 rounded-lg shadow-md">
@@ -94,6 +90,7 @@ const Contact = () => {
                   <Input
                     type="text"
                     id="fullName"
+                    name="from_name"
                     placeholder="Your full name"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
@@ -101,7 +98,7 @@ const Contact = () => {
                     className="w-full px-4 py-3 rounded-lg border border-brand-lightblue focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-brand-red"
                   />
                 </div>
-                
+
                 <div className="mb-6">
                   <label htmlFor="email" className="block text-sm font-medium text-brand-green mb-2">
                     Email Address
@@ -109,6 +106,7 @@ const Contact = () => {
                   <Input
                     type="email"
                     id="email"
+                    name="from_email"
                     placeholder="you@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -116,13 +114,14 @@ const Contact = () => {
                     className="w-full px-4 py-3 rounded-lg border border-brand-lightblue focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-brand-red"
                   />
                 </div>
-                
+
                 <div className="mb-6">
                   <label htmlFor="message" className="block text-sm font-medium text-brand-green mb-2">
                     Message
                   </label>
                   <Textarea
                     id="message"
+                    name="message"
                     rows={5}
                     placeholder="Enter your message here..."
                     value={message}
@@ -131,7 +130,7 @@ const Contact = () => {
                     className="w-full px-4 py-3 rounded-lg border border-brand-lightblue focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-brand-red"
                   />
                 </div>
-                
+
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -141,11 +140,11 @@ const Contact = () => {
                 </Button>
               </form>
             </div>
-            
+
             <div>
               <div className="bg-brand-lightblue rounded-lg p-6 md:p-8 h-full shadow-md">
                 <h3 className="text-xl font-semibold mb-4 text-brand-green">Get In Touch</h3>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mt-1 text-brand-red">
@@ -158,7 +157,7 @@ const Contact = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mt-1 text-brand-red">
                       <Phone className="h-5 w-5" />
@@ -168,7 +167,7 @@ const Contact = () => {
                       <p className="text-brand-green/80 mt-1">+91 9876543210</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mt-1 text-brand-red">
                       <Mail className="h-5 w-5" />
@@ -178,7 +177,7 @@ const Contact = () => {
                       <p className="text-brand-green/80 mt-1">info@itsolutionsiwan.com</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mt-1 text-brand-red">
                       <Clock className="h-5 w-5" />
@@ -190,33 +189,33 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="mt-8">
                   <h4 className="text-sm font-medium text-brand-green mb-3">Follow Us</h4>
                   <div className="flex space-x-4">
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="bg-black text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
                       aria-label="Facebook"
                     >
                       <i className="fab fa-facebook-f"></i>
                     </a>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="bg-black text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
                       aria-label="Instagram"
                     >
                       <i className="fab fa-instagram"></i>
                     </a>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="bg-black text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
                       aria-label="WhatsApp"
                     >
                       <i className="fab fa-whatsapp"></i>
                     </a>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="bg-black text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
                       aria-label="YouTube"
                     >
