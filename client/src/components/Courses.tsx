@@ -32,7 +32,7 @@ const Courses = () => {
     <section id="courses" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">Our Courses</h2>
-        <p className="text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-slate-900 text-center mb-12 max-w-2xl mx-auto">
           Comprehensive programs designed to build your skills and advance your career
         </p>
         
@@ -73,17 +73,17 @@ const Courses = () => {
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h4 className="text-xl font-semibold text-slate-800">{course.title}</h4>
+                  <h4 className="text-xl font-semibold text-slate-900">{course.title}</h4>
                   <span className="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full font-medium">
                     {course.duration}
                   </span>
                 </div>
-                <p className="text-slate-600 mb-4">{course.description}</p>
+                <p className="text-slate-900 mb-4">{course.description}</p>
                 <ul className="space-y-2 mb-6">
                   {course.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
-                      <span className="text-slate-700">{feature.text}</span>
+                      <span className="text-slate-900">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -112,12 +112,12 @@ const Courses = () => {
                 <span className="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full font-medium inline-block mb-3">
                   {course.duration}
                 </span>
-                <p className="text-slate-600 mb-4">{course.description}</p>
+                <p className="text-slate-900 mb-4">{course.description}</p>
                 <ul className="space-y-2 mb-6">
                   {course.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
-                      <span className="text-slate-700">{feature.text}</span>
+                      <span className="text-slate-900">{feature.text}</span>
                     </li>
                   ))}
                 </ul>

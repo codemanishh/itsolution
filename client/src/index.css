@@ -95,23 +95,44 @@ section {
   @apply z-50;
 }
 
-/* Force black text in specific components */
-.text-slate-500, .text-slate-600, .text-slate-700, .text-slate-800 {
-  @apply text-black !important;
+/* High-contrast text utilities */
+.text-high-contrast {
+  @apply text-yellow-300;
 }
 
-/* Exceptions for buttons and special elements with white text */
-.bg-primary-600 *, .bg-primary-700 *, .bg-secondary-600 *, .bg-secondary-700 *, .bg-accent-500 *,
-.bg-gradient-to-r *, .bg-gradient-to-br *, .bg-slate-900 * {
+.text-high-contrast-light {
+  @apply text-yellow-200;
+}
+
+.text-high-contrast-dark {
+  @apply text-blue-900;
+}
+
+/* Dark backgrounds should always have light text */
+.bg-primary-600 h1, .bg-primary-600 h2, .bg-primary-600 h3, .bg-primary-600 h4, .bg-primary-600 h5, .bg-primary-600 h6,
+.bg-primary-600 p, .bg-primary-600 span, .bg-primary-600 a, .bg-primary-600 li, .bg-primary-600 div,
+.bg-primary-700 h1, .bg-primary-700 h2, .bg-primary-700 h3, .bg-primary-700 h4, .bg-primary-700 h5, .bg-primary-700 h6,
+.bg-primary-700 p, .bg-primary-700 span, .bg-primary-700 a, .bg-primary-700 li, .bg-primary-700 div,
+.bg-secondary-600 h1, .bg-secondary-600 h2, .bg-secondary-600 h3, .bg-secondary-600 h4, .bg-secondary-600 h5, .bg-secondary-600 h6,
+.bg-secondary-600 p, .bg-secondary-600 span, .bg-secondary-600 a, .bg-secondary-600 li, .bg-secondary-600 div,
+.bg-secondary-700 h1, .bg-secondary-700 h2, .bg-secondary-700 h3, .bg-secondary-700 h4, .bg-secondary-700 h5, .bg-secondary-700 h6,
+.bg-secondary-700 p, .bg-secondary-700 span, .bg-secondary-700 a, .bg-secondary-700 li, .bg-secondary-700 div,
+.bg-accent-500 h1, .bg-accent-500 h2, .bg-accent-500 h3, .bg-accent-500 h4, .bg-accent-500 h5, .bg-accent-500 h6,
+.bg-accent-500 p, .bg-accent-500 span, .bg-accent-500 a, .bg-accent-500 li, .bg-accent-500 div,
+.bg-slate-900 h1, .bg-slate-900 h2, .bg-slate-900 h3, .bg-slate-900 h4, .bg-slate-900 h5, .bg-slate-900 h6,
+.bg-slate-900 p, .bg-slate-900 span, .bg-slate-900 a, .bg-slate-900 li, .bg-slate-900 div,
+.bg-gradient-to-r h1, .bg-gradient-to-r h2, .bg-gradient-to-r h3, .bg-gradient-to-r h4, .bg-gradient-to-r h5, .bg-gradient-to-r h6,
+.bg-gradient-to-r p, .bg-gradient-to-r span, .bg-gradient-to-r a, .bg-gradient-to-r li, .bg-gradient-to-r div,
+.bg-gradient-to-br h1, .bg-gradient-to-br h2, .bg-gradient-to-br h3, .bg-gradient-to-br h4, .bg-gradient-to-br h5, .bg-gradient-to-br h6,
+.bg-gradient-to-br p, .bg-gradient-to-br span, .bg-gradient-to-br a, .bg-gradient-to-br li, .bg-gradient-to-br div {
   @apply text-white;
 }
 
-/* Button text color exceptions */
-.btn, 
-.bg-primary-600, .bg-primary-700, 
-.bg-secondary-600, .bg-secondary-700, 
-.bg-accent-500,
-.bg-gradient-to-r, .bg-gradient-to-br, 
-.bg-slate-900 {
-  @apply text-white;
+/* Create general classes for text colors based on backgrounds */
+.text-on-dark {
+  @apply text-white !important;
+}
+
+.text-on-light {
+  @apply text-slate-900 !important;
 }
