@@ -54,15 +54,15 @@
   }
 
   body {
-    @apply bg-background text-black font-['Roboto',sans-serif];
+    @apply bg-background text-slate-800 font-['Roboto',sans-serif];
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-['Inter',sans-serif] text-black;
+    @apply font-['Inter',sans-serif] text-slate-800;
   }
   
   p, span, a, li, input, textarea, button, label {
-    @apply text-black;
+    @apply text-slate-800;
   }
 }
 

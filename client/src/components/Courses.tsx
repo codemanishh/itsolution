@@ -67,7 +67,7 @@ const Courses = () => {
         {/* Computer Courses */}
         <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 ${activeTab === 'computer' ? 'block' : 'hidden'}`}>
           {courses.computerCourses.map((course, index) => (
-            <div key={index} className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+            <div key={index} className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className={`h-48 ${course.color} flex items-center justify-center text-white`}>
                 <h3 className="text-4xl font-bold">{course.name}</h3>
               </div>
@@ -89,7 +89,7 @@ const Courses = () => {
                 </ul>
                 <a 
                   href="#contact" 
-                  className={`inline-block w-full text-center ${course.color} text-white font-medium py-3 px-4 rounded-lg transition hover:opacity-90`}
+                  className={`inline-block w-full text-center ${course.color} text-white font-medium py-3 px-4 rounded-lg transition shadow-md hover:shadow-lg hover:scale-[1.02]`}
                 >
                   Enroll Now
                 </a>
@@ -101,7 +101,7 @@ const Courses = () => {
         {/* Typing Courses */}
         <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 ${activeTab === 'typing' ? 'block' : 'hidden'}`}>
           {courses.typingCourses.map((course, index) => (
-            <div key={index} className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+            <div key={index} className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className={`h-48 flex items-center justify-center text-white ${course.color}`}>
                 <div className="text-center">
                   <i className="fas fa-keyboard text-4xl mb-2"></i>
@@ -123,7 +123,7 @@ const Courses = () => {
                 </ul>
                 <a 
                   href="#contact" 
-                  className="inline-block w-full text-center bg-gradient-to-r from-primary-600 to-primary-700 text-white font-medium py-3 px-4 rounded-lg transition hover:opacity-90"
+                  className="inline-block w-full text-center bg-gradient-to-r from-primary-600 to-primary-700 text-white font-medium py-3 px-4 rounded-lg transition shadow-md hover:shadow-lg hover:scale-[1.02]"
                 >
                   Enroll Now
                 </a>
