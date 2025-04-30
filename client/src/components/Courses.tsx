@@ -73,7 +73,7 @@ const Courses = () => {
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h4 className="text-xl font-semibold">{course.title}</h4>
+                  <h4 className="text-xl font-semibold text-slate-800">{course.title}</h4>
                   <span className="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full font-medium">
                     {course.duration}
                   </span>
@@ -83,13 +83,13 @@ const Courses = () => {
                   {course.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
-                      <span>{feature.text}</span>
+                      <span className="text-slate-700">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
                 <a 
                   href="#contact" 
-                  className={`inline-block w-full text-center ${course.color} text-white font-medium py-3 px-4 rounded-lg transition`}
+                  className={`inline-block w-full text-center ${course.color} text-white font-medium py-3 px-4 rounded-lg transition hover:opacity-90`}
                 >
                   Enroll Now
                 </a>
@@ -109,18 +109,21 @@ const Courses = () => {
                 </div>
               </div>
               <div className="p-6">
+                <span className="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full font-medium inline-block mb-3">
+                  {course.duration}
+                </span>
                 <p className="text-slate-600 mb-4">{course.description}</p>
                 <ul className="space-y-2 mb-6">
                   {course.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
-                      <span>{feature.text}</span>
+                      <span className="text-slate-700">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
                 <a 
                   href="#contact" 
-                  className={`inline-block w-full text-center ${course.color.replace('bg-gradient-to-r', 'bg')} text-white font-medium py-3 px-4 rounded-lg transition`}
+                  className="inline-block w-full text-center bg-gradient-to-r from-primary-600 to-primary-700 text-white font-medium py-3 px-4 rounded-lg transition hover:opacity-90"
                 >
                   Enroll Now
                 </a>

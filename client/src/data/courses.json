@@ -58,6 +58,7 @@
   "typingCourses": [
     {
       "name": "English Typing",
+      "title": "English Typing Course",
       "duration": "3 months",
       "description": "Master English typing with speed and accuracy. Perfect for office jobs and government positions.",
       "color": "bg-gradient-to-r from-indigo-500 to-purple-600",
@@ -75,6 +76,7 @@
     },
     {
       "name": "Hindi Typing",
+      "title": "Hindi Typing Course",
       "duration": "3 months",
       "description": "Learn Hindi typing using both Krutidev and Unicode methods for government jobs and office work.",
       "color": "bg-gradient-to-r from-orange-500 to-pink-500",
