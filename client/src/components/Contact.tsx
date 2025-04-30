@@ -76,19 +76,19 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-white">
+    <section id="contact" className="py-16 bg-brand-mint">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">Contact Us</h2>
-          <p className="text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-brand-green">Contact Us</h2>
+          <p className="text-brand-green text-center mb-12 max-w-2xl mx-auto">
             Have questions about our courses? Drop us a message and we'll get back to you shortly
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <form ref={formRef} onSubmit={handleSubmit}>
+              <form ref={formRef} onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
                 <div className="mb-6">
-                  <label htmlFor="fullName" className="block text-sm font-medium text-slate-700 mb-2">
+                  <label htmlFor="fullName" className="block text-sm font-medium text-brand-green mb-2">
                     Full Name
                   </label>
                   <Input
@@ -98,12 +98,12 @@ const Contact = () => {
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-4 py-3 rounded-lg border border-brand-lightblue focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-brand-red"
                   />
                 </div>
                 
                 <div className="mb-6">
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-brand-green mb-2">
                     Email Address
                   </label>
                   <Input
@@ -113,12 +113,12 @@ const Contact = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-4 py-3 rounded-lg border border-brand-lightblue focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-brand-red"
                   />
                 </div>
                 
                 <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-brand-green mb-2">
                     Message
                   </label>
                   <Textarea
@@ -128,14 +128,14 @@ const Contact = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-4 py-3 rounded-lg border border-brand-lightblue focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-brand-red"
                   />
                 </div>
                 
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-4 rounded-lg transition"
+                  className="w-full bg-brand-red hover:bg-opacity-90 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
@@ -143,81 +143,81 @@ const Contact = () => {
             </div>
             
             <div>
-              <div className="bg-slate-50 rounded-lg p-6 md:p-8 h-full">
-                <h3 className="text-xl font-semibold mb-4">Get In Touch</h3>
+              <div className="bg-brand-lightblue rounded-lg p-6 md:p-8 h-full shadow-md">
+                <h3 className="text-xl font-semibold mb-4 text-brand-green">Get In Touch</h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 mt-1 text-primary-600">
+                    <div className="flex-shrink-0 mt-1 text-brand-red">
                       <MapPin className="h-5 w-5" />
                     </div>
                     <div className="ml-4">
-                      <h4 className="text-sm font-medium text-slate-900">Address</h4>
-                      <p className="text-slate-600 mt-1">
+                      <h4 className="text-sm font-medium text-brand-green">Address</h4>
+                      <p className="text-brand-green/80 mt-1">
                         Arya Samaj Campus, DAV Mode, Station Road, Siwan, Bihar, PIN 841226
                       </p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 mt-1 text-primary-600">
+                    <div className="flex-shrink-0 mt-1 text-brand-red">
                       <Phone className="h-5 w-5" />
                     </div>
                     <div className="ml-4">
-                      <h4 className="text-sm font-medium text-slate-900">Phone</h4>
-                      <p className="text-slate-600 mt-1">+91 9876543210</p>
+                      <h4 className="text-sm font-medium text-brand-green">Phone</h4>
+                      <p className="text-brand-green/80 mt-1">+91 9876543210</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 mt-1 text-primary-600">
+                    <div className="flex-shrink-0 mt-1 text-brand-red">
                       <Mail className="h-5 w-5" />
                     </div>
                     <div className="ml-4">
-                      <h4 className="text-sm font-medium text-slate-900">Email</h4>
-                      <p className="text-slate-600 mt-1">info@itsolutionsiwan.com</p>
+                      <h4 className="text-sm font-medium text-brand-green">Email</h4>
+                      <p className="text-brand-green/80 mt-1">info@itsolutionsiwan.com</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 mt-1 text-primary-600">
+                    <div className="flex-shrink-0 mt-1 text-brand-red">
                       <Clock className="h-5 w-5" />
                     </div>
                     <div className="ml-4">
-                      <h4 className="text-sm font-medium text-slate-900">Office Hours</h4>
-                      <p className="text-slate-600 mt-1">Mon-Sat: 9:00 AM - 6:00 PM</p>
-                      <p className="text-slate-600">Sunday: Closed</p>
+                      <h4 className="text-sm font-medium text-brand-green">Office Hours</h4>
+                      <p className="text-brand-green/80 mt-1">Mon-Sat: 9:00 AM - 6:00 PM</p>
+                      <p className="text-brand-green/80">Sunday: Closed</p>
                     </div>
                   </div>
                 </div>
                 
                 <div className="mt-8">
-                  <h4 className="text-sm font-medium text-slate-900 mb-3">Follow Us</h4>
+                  <h4 className="text-sm font-medium text-brand-green mb-3">Follow Us</h4>
                   <div className="flex space-x-4">
                     <a 
                       href="#" 
-                      className="bg-primary-100 text-primary-600 hover:bg-primary-200 w-10 h-10 rounded-full flex items-center justify-center transition"
+                      className="bg-white text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
                       aria-label="Facebook"
                     >
                       <i className="fab fa-facebook-f"></i>
                     </a>
                     <a 
                       href="#" 
-                      className="bg-primary-100 text-primary-600 hover:bg-primary-200 w-10 h-10 rounded-full flex items-center justify-center transition"
+                      className="bg-white text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
                       aria-label="Instagram"
                     >
                       <i className="fab fa-instagram"></i>
                     </a>
                     <a 
                       href="#" 
-                      className="bg-primary-100 text-primary-600 hover:bg-primary-200 w-10 h-10 rounded-full flex items-center justify-center transition"
+                      className="bg-white text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
                       aria-label="WhatsApp"
                     >
                       <i className="fab fa-whatsapp"></i>
                     </a>
                     <a 
                       href="#" 
-                      className="bg-primary-100 text-primary-600 hover:bg-primary-200 w-10 h-10 rounded-full flex items-center justify-center transition"
+                      className="bg-white text-brand-red hover:text-brand-coral w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
                       aria-label="YouTube"
                     >
                       <i className="fab fa-youtube"></i>

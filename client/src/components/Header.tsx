@@ -35,37 +35,37 @@ const Header = () => {
 
   return (
     <header className={cn(
-      "sticky top-0 z-50 bg-white transition",
+      "sticky top-0 z-50 bg-brand-mint transition",
       isScrolled ? "shadow-md" : ""
     )}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
             {/* Logo and name */}
-            <div className="h-12 w-12 rounded-full bg-primary-600 flex items-center justify-center text-white font-bold text-xl">
+            <div className="h-12 w-12 rounded-full bg-brand-red flex items-center justify-center text-white font-bold text-xl">
               ITS
             </div>
             <div>
-              <h1 className="text-lg md:text-xl font-bold text-slate-900">IT Solution Siwan</h1>
-              <p className="text-xs text-slate-500">Computer & Typing Classes</p>
+              <h1 className="text-lg md:text-xl font-bold text-brand-green">IT Solution Siwan</h1>
+              <p className="text-xs text-brand-teal">Computer & Typing Classes</p>
             </div>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#home" className={cn(
-              "font-medium transition",
-              isActive("/") ? "text-primary-600" : "text-slate-600 hover:text-primary-600"
+              "font-medium transition-all duration-300",
+              isActive("/") ? "text-brand-red" : "text-brand-green hover:text-brand-red"
             )}>Home</a>
-            <a href="#courses" className="font-medium text-slate-600 hover:text-primary-600 transition">Courses</a>
-            <a href="#certificate" className="font-medium text-slate-600 hover:text-primary-600 transition">Certificate Validation</a>
-            <a href="#contact" className="font-medium text-slate-600 hover:text-primary-600 transition">Contact</a>
+            <a href="#courses" className="font-medium text-brand-green hover:text-brand-red transition-all duration-300">Courses</a>
+            <a href="#certificate" className="font-medium text-brand-green hover:text-brand-red transition-all duration-300">Certificate Validation</a>
+            <a href="#contact" className="font-medium text-brand-green hover:text-brand-red transition-all duration-300">Contact</a>
           </nav>
           
           {/* Mobile Menu Button */}
           <button 
             onClick={toggleMobileMenu}
-            className="block md:hidden text-slate-900 hover:text-primary-600 transition" 
+            className="block md:hidden text-brand-green hover:text-brand-red transition-all duration-300" 
             aria-label="Menu"
           >
             {isMobileMenuOpen ? (
@@ -78,32 +78,32 @@ const Header = () => {
         
         {/* Mobile Navigation */}
         <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} pb-4 animate-accordion-down`}>
-          <nav className="flex flex-col space-y-4">
+          <nav className="flex flex-col space-y-4 bg-brand-lightblue p-4 rounded-lg">
             <a 
               href="#home" 
               onClick={closeMobileMenu}
-              className="font-medium text-primary-600 hover:text-primary-700 transition py-2 border-b border-slate-100"
+              className="font-medium text-brand-red hover:text-brand-coral transition-all duration-300 py-2 border-b border-brand-teal/20"
             >
               Home
             </a>
             <a 
               href="#courses" 
               onClick={closeMobileMenu}
-              className="font-medium text-slate-600 hover:text-primary-600 transition py-2 border-b border-slate-100"
+              className="font-medium text-brand-green hover:text-brand-red transition-all duration-300 py-2 border-b border-brand-teal/20"
             >
               Courses
             </a>
             <a 
               href="#certificate" 
               onClick={closeMobileMenu}
-              className="font-medium text-slate-600 hover:text-primary-600 transition py-2 border-b border-slate-100"
+              className="font-medium text-brand-green hover:text-brand-red transition-all duration-300 py-2 border-b border-brand-teal/20"
             >
               Certificate Validation
             </a>
             <a 
               href="#contact" 
               onClick={closeMobileMenu}
-              className="font-medium text-slate-600 hover:text-primary-600 transition py-2"
+              className="font-medium text-brand-green hover:text-brand-red transition-all duration-300 py-2"
             >
               Contact
             </a>
