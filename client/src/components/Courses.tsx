@@ -19,6 +19,7 @@ interface CoursesData {
   computerCourses: Course[];
   typingCourses: Course[];
 }
+// ... same imports
 
 const Courses = () => {
   const [activeTab, setActiveTab] = useState<'computer' | 'typing'>('computer');
@@ -29,22 +30,22 @@ const Courses = () => {
   }, []);
 
   return (
-    <section id="courses" className="py-16 bg-black">
+    <section id="courses" className="py-16 bg-gray-950">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">Our Courses</h2>
-        <p className="text-slate-900 text-center mb-12 max-w-2xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-3">Our Courses</h2>
+        <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
           Comprehensive programs designed to build your skills and advance your career
         </p>
         
-        {/* Course Category Tabs */}
+        {/* Tabs */}
         <div className="flex justify-center mb-10">
-          <div className="inline-flex rounded-md shadow-sm" role="group">
+          <div className="inline-flex rounded-md shadow-md overflow-hidden" role="group">
             <button 
               type="button" 
-              className={`px-6 py-3 text-sm font-medium rounded-l-lg focus:z-10 focus:outline-none ${
+              className={`px-6 py-3 text-sm font-medium focus:outline-none transition-colors duration-200 ${
                 activeTab === 'computer' 
-                  ? 'bg-primary-600 text-black' 
-                  : 'bg-slate-200 text-slate-800 hover:bg-slate-300'
+                  ? 'bg-primary-600 text-white' 
+                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               }`}
               onClick={() => setActiveTab('computer')}
             >
@@ -52,10 +53,10 @@ const Courses = () => {
             </button>
             <button 
               type="button" 
-              className={`px-6 py-3 text-sm font-medium rounded-r-lg focus:z-10 focus:outline-none ${
+              className={`px-6 py-3 text-sm font-medium focus:outline-none transition-colors duration-200 ${
                 activeTab === 'typing' 
-                  ? 'bg-primary-600 text-black' 
-                  : 'bg-slate-200 text-slate-800 hover:bg-slate-300'
+                  ? 'bg-primary-600 text-white' 
+                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               }`}
               onClick={() => setActiveTab('typing')}
             >
@@ -63,45 +64,47 @@ const Courses = () => {
             </button>
           </div>
         </div>
-        
+
         {/* Computer Courses */}
         <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 ${activeTab === 'computer' ? 'block' : 'hidden'}`}>
           {courses.computerCourses.map((course, index) => (
-            <div key={index} className="bg-black border border-slate-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div key={index} className="bg-gray-900 border border-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className={`h-48 ${course.color} flex items-center justify-center text-black`}>
                 <h3 className="text-4xl font-bold">{course.name}</h3>
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h4 className="text-xl font-semibold text-slate-900">{course.title}</h4>
+                  <h4 className="text-xl font-semibold text-white">{course.title}</h4>
                   <span className="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full font-medium">
                     {course.duration}
                   </span>
                 </div>
-                <p className="text-slate-900 mb-4">{course.description}</p>
+                <p className="text-gray-300 mb-4">{course.description}</p>
                 <ul className="space-y-2 mb-6">
                   {course.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
-                      <span className="text-slate-900">{feature.text}</span>
+                      <span className="text-white">{feature.text}</span>
+
                     </li>
                   ))}
                 </ul>
                 <a 
-                  href="#contact" 
-                  className={`inline-block w-full text-center ${course.color} text-black font-medium py-3 px-4 rounded-lg transition shadow-md hover:shadow-lg hover:scale-[1.02]`}
-                >
-                  Enroll Now
-                </a>
+  href="#contact" 
+  className="inline-block w-full text-center bg-gradient-to-r from-green-500 to-green-700 text-white font-medium py-3 px-4 rounded-lg transition shadow-md hover:shadow-lg hover:scale-[1.02]"
+>
+  Enroll Now
+</a>
+
               </div>
             </div>
           ))}
         </div>
-        
+
         {/* Typing Courses */}
         <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 ${activeTab === 'typing' ? 'block' : 'hidden'}`}>
           {courses.typingCourses.map((course, index) => (
-            <div key={index} className="bg-black border border-slate-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div key={index} className="bg-gray-900 border border-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className={`h-48 flex items-center justify-center text-black ${course.color}`}>
                 <div className="text-center">
                   <i className="fas fa-keyboard text-4xl mb-2"></i>
@@ -112,12 +115,12 @@ const Courses = () => {
                 <span className="bg-primary-100 text-primary-800 text-xs px-3 py-1 rounded-full font-medium inline-block mb-3">
                   {course.duration}
                 </span>
-                <p className="text-slate-900 mb-4">{course.description}</p>
+                <p className="text-gray-300 mb-4">{course.description}</p>
                 <ul className="space-y-2 mb-6">
                   {course.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
-                      <span className="text-slate-900">{feature.text}</span>
+                      <span className="text-gray-300">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
